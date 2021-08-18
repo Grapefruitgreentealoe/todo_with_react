@@ -16,7 +16,7 @@ const TodoTemplateBlock = styled.div`
     margin-bottom : 32px;
     display : flex;
     flex-direction: column;
-`;
+`; 
 
 export default function TodoTemplate({ children }) {
     return <TodoTemplateBlock>{children}</TodoTemplateBlock>

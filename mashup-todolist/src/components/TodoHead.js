@@ -25,13 +25,16 @@ const TodoHeadBlock = styled.div `
 
 export default function TodoHead() {
     const todos = useTodoState();
+    const undoneTasks = todos.filter(todo => !todo.done);
+
     console.log(todos);
     return ( <
         TodoHeadBlock >
         <
         h1 > 2019 년 7 월 10 일 < /h1> <
         div className = "day" > 수요일 < /div> <
-        div className = "tasks-left" > 할일 2 개 남음 < /div> <
-        /TodoHeadBlock>
+        div className = "tasks-left" > 할일 { undoneTasks.length }
+        개 남음 < /div> < /
+        TodoHeadBlock >
     )
 }
